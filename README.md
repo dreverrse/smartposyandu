@@ -96,22 +96,26 @@ Sistem ini menggantikan pencatatan manual menjadi sistem realtime yang cepat, ra
 ```bash
 npm install
 npm run dev
+```
 
 ## 🏗️ Build Production
 
 ```bash
 npm run build
+```
 
 ## 🚀 Deploy Firebase Hosting
 
 ```bash
 firebase deploy
+```
 
 ## 🔑 Environment File
 
+### Buat file .env
+
 ```bash
-Buat file .env
-Environment
+//Environment
 VITE_FIREBASE_API_KEY=
 VITE_FIREBASE_AUTH_DOMAIN=
 VITE_FIREBASE_PROJECT_ID=
@@ -119,7 +123,7 @@ VITE_FIREBASE_STORAGE_BUCKET=
 VITE_FIREBASE_MESSAGING_SENDER_ID=
 VITE_FIREBASE_APP_ID=
 VITE_OPENROUTER_KEY=
-
+```
 
 ## 🎯 Target Pengguna
 🏥 Posyandu Desa
