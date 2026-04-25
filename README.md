@@ -1,18 +1,137 @@
-# React + Vite
+# 🏥 PKM NEXUS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Digital Public Health Management System
 
-Currently, two official plugins are available:
+Platform Posyandu modern berbasis web untuk mengelola data balita, kader, kegiatan, dan laporan analitik cerdas dalam satu sistem terintegrasi.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Tentang Proyek
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+PKM Nexus dibuat untuk membantu Posyandu, Puskesmas, dan tenaga kesehatan dalam proses digitalisasi layanan masyarakat.
 
-Note: This will impact Vite dev & build performances.
+Sistem ini menggantikan pencatatan manual menjadi sistem realtime yang cepat, rapi, aman, dan mudah diakses melalui HP maupun desktop.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Fitur Utama
+
+### 📊 Dashboard Premium
+- Statistik realtime
+- Monitoring kesehatan balita
+- Grafik interaktif
+- Sebaran wilayah
+- Insight AI otomatis
+
+### 👶 Data Balita
+- Tambah data balita
+- Edit data
+- Detail lengkap
+- Monitoring berat badan
+- Monitoring tinggi badan
+- Status risiko kesehatan
+
+### 👩‍⚕️ Manajemen Kader
+- Data kader posyandu
+- Status aktif / nonaktif
+- Wilayah tugas
+- Informasi petugas lapangan
+
+### 📅 Manajemen Kegiatan
+- Jadwal kegiatan posyandu
+- Target peserta
+- Kehadiran peserta
+- Penanggung jawab
+- Status kegiatan
+
+### 📄 Report Analytics
+- Export PDF premium
+- Ringkasan statistik
+- Grafik visual interaktif
+- Insight AI otomatis
+
+### 🔐 Sistem Keamanan
+- Firebase Authentication
+- Route private login
+- Logout aman
+- Firestore security rules
+
+### 📱 PWA Ready
+- Install seperti aplikasi Android
+- Shortcut home screen
+- Fast loading
+- Mobile responsive
+
+---
+
+## 🛠️ Teknologi
+
+- ⚛️ React JS
+- ⚡ Vite
+- 🔥 Firebase Authentication
+- 🗄️ Firestore Database
+- 🌐 Firebase Hosting
+- 📈 Recharts
+- 📄 jsPDF
+- 🤖 OpenRouter AI
+- 🎨 Premium Custom UI
+
+---
+
+## 📂 Struktur Halaman
+
+- 🔑 Login
+- 🏠 Dashboard
+- 👶 Balita
+- ➕ Input
+- 📄 Report
+- 👩‍⚕️ Kader
+- 📅 Kegiatan
+- 👤 Akun
+
+---
+
+## 💻 Instalasi Lokal
+
+```bash
+npm install
+npm run dev
+
+## 🏗️ Build Production
+
+```bash
+npm run build
+
+## 🚀 Deploy Firebase Hosting
+
+```bash
+firebase deploy
+
+## 🔑 Environment File
+
+```bash
+Buat file .env
+Environment
+VITE_FIREBASE_API_KEY=
+VITE_FIREBASE_AUTH_DOMAIN=
+VITE_FIREBASE_PROJECT_ID=
+VITE_FIREBASE_STORAGE_BUCKET=
+VITE_FIREBASE_MESSAGING_SENDER_ID=
+VITE_FIREBASE_APP_ID=
+VITE_OPENROUTER_KEY=
+
+
+## 🎯 Target Pengguna
+🏥 Posyandu Desa
+🏢 Puskesmas
+👩‍⚕️ Kader Kesehatan
+📉 Program Stunting
+👶 Monitoring Anak
+🛣️ Roadmap
+📶 Offline Sync Mode
+👥 Multi User Role
+📊 Export Excel
+💬 WhatsApp Reminder
+🤖 AI Prediksi Stunting
+☁️ Backup Database Otomatis
+📍 GIS Wilayah Kesehatan
