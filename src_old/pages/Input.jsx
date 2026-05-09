@@ -187,8 +187,8 @@ export default function Input() {
   function hitungRisiko() {
     let skor = 0;
 
-    if (Number(form.berat) < 10) skor++;
-    if (Number(form.tinggi) < 80) skor++;
+    if (parseFloat(String(form.berat).replace(",", ".")) < 10) skor++;
+    if (parseFloat(String(form.tinggi).replace(",", ".")) < 80) skor++;
     if (form.imunisasi === "Belum Lengkap") skor++;
     if (form.gizi === "Kurang") skor++;
 
@@ -221,6 +221,8 @@ export default function Input() {
 
       await addDoc(collection(db, "balita"), {
         ...form,
+        berat: parseFloat(String(form.berat).replace(",", ".")),
+        tinggi: parseFloat(String(form.tinggi).replace(",", ".")),
         risiko: hitungRisiko(),
         createdAt: serverTimestamp()
       });

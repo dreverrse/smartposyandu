@@ -129,9 +129,7 @@ export default function Dashboard() {
           data.reduce(
             (a, b) =>
               a +
-              Number(
-                b.berat || 0
-              ),
+              parseFloat(String(b.berat || 0).replace(",", ".")),
             0
           ) / total
         ).toFixed(1)
@@ -143,9 +141,7 @@ export default function Dashboard() {
           data.reduce(
             (a, b) =>
               a +
-              Number(
-                b.tinggi || 0
-              ),
+              parseFloat(String(b.tinggi || 0).replace(",", ".")),
             0
           ) / total
         ).toFixed(1)
@@ -237,14 +233,10 @@ export default function Dashboard() {
     trenMap[key].total += 1;
 
     trenMap[key].berat +=
-      Number(
-        item.berat || 0
-      );
+      parseFloat(String(item.berat || 0).replace(",", "."));
 
     trenMap[key].tinggi +=
-      Number(
-        item.tinggi || 0
-      );
+      parseFloat(String(item.tinggi || 0).replace(",", "."));
   });
 
   const trenData =

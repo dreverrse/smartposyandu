@@ -1393,3 +1393,130 @@ padding:10px 16px;
 border-radius:14px;
 font-weight:700;
 }
+/* ─── PRIVASI PAGE ───────────────────────────────────── */
+
+.privasi-section-title {
+  font-size:13px; font-weight:800;
+  color:var(--muted); text-transform:uppercase;
+  letter-spacing:0.6px; margin:22px 0 10px 4px;
+}
+
+.privasi-card {
+  background:#fff; border:1px solid var(--line2);
+  border-radius:var(--radius); overflow:hidden;
+}
+
+.privasi-row {
+  display:flex; align-items:center;
+  gap:14px; padding:16px 20px;
+  border-bottom:1px solid var(--line2);
+  cursor:pointer;
+  transition:background 0.12s;
+}
+.privasi-row:last-child { border-bottom:none; }
+.privasi-row:hover { background:#f8faff; }
+
+.privasi-icon {
+  width:40px; height:40px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.privasi-icon.blue   { background:#eef4ff; color:#2563eb; }
+.privasi-icon.green  { background:#ecfdf3; color:#16a34a; }
+.privasi-icon.orange { background:#fff8ed; color:#f59e0b; }
+.privasi-icon.red    { background:#fff1f2; color:#ef4444; }
+.privasi-icon.purple { background:#f5f3ff; color:#7c3aed; }
+
+.privasi-info { flex:1; min-width:0; }
+.privasi-info strong { display:block; font-size:15px; font-weight:700; color:#0f172a; }
+.privasi-info span   { display:block; font-size:13px; color:var(--muted); margin-top:2px; }
+
+.privasi-chevron { color:#b0bac9; flex-shrink:0; }
+
+.privasi-badge {
+  padding:5px 12px; border-radius:999px;
+  font-size:12px; font-weight:800;
+}
+.privasi-badge.green { background:#ecfdf3; color:#16a34a; }
+.privasi-badge.blue  { background:#eef4ff; color:#2563eb; }
+
+/* toggle */
+.privasi-toggle {
+  position:relative; width:44px; height:26px; cursor:pointer;
+}
+.privasi-toggle input { opacity:0; width:0; height:0; position:absolute; }
+.privasi-toggle-track {
+  position:absolute; inset:0;
+  background:#e2e8f0; border-radius:999px;
+  transition:background 0.2s;
+}
+.privasi-toggle input:checked + .privasi-toggle-track { background:#2563eb; }
+.privasi-toggle-thumb {
+  position:absolute; top:3px; left:3px;
+  width:20px; height:20px; background:#fff;
+  border-radius:50%; transition:transform 0.2s;
+  box-shadow:0 1px 4px rgba(0,0,0,.15);
+}
+.privasi-toggle input:checked ~ .privasi-toggle-thumb { transform:translateX(18px); }
+
+/* modal */
+.privasi-modal-overlay {
+  position:fixed; inset:0;
+  background:rgba(15,23,42,.5);
+  display:flex; align-items:flex-end; justify-content:center;
+  z-index:9999;
+}
+@media (min-width:600px) {
+  .privasi-modal-overlay { align-items:center; padding:20px; }
+}
+
+.privasi-modal {
+  width:100%; max-width:480px;
+  background:#fff; border-radius:28px 28px 0 0;
+  padding:28px 24px 40px;
+}
+@media (min-width:600px) {
+  .privasi-modal { border-radius:28px; padding:32px; }
+}
+
+.privasi-modal-head {
+  display:flex; align-items:center;
+  justify-content:space-between; margin-bottom:20px;
+}
+.privasi-modal-head h3 { font-size:20px; font-weight:800; }
+
+.privasi-modal-close {
+  width:36px; height:36px; border-radius:12px;
+  background:#f1f5f9; border:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  color:#64748b;
+}
+
+.privasi-modal-body { display:flex; flex-direction:column; gap:14px; }
+.privasi-modal-body label { margin:0; }
+
+.privasi-input-wrap { position:relative; display:flex; align-items:center; }
+.privasi-input-wrap input { padding-right:48px; }
+.privasi-input-wrap button {
+  position:absolute; right:14px;
+  background:none; border:none; cursor:pointer;
+  color:var(--muted); display:flex; align-items:center;
+}
+
+.privasi-modal-footer {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:12px; margin-top:24px;
+}
+.privasi-modal-footer .save-btn,
+.privasi-modal-footer .mini-btn {
+  height:50px; border-radius:14px; font-size:15px;
+}
+
+.privasi-info-box {
+  background:#f8fafc; border:1px solid var(--line2);
+  border-radius:16px; padding:16px;
+  font-size:14px; line-height:1.65; color:var(--muted);
+}
+.privasi-info-box strong {
+  color:#0f172a; display:block; margin-bottom:4px; font-size:14px;
+}
