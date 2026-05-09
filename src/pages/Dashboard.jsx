@@ -183,8 +183,8 @@ export default function Dashboard() {
     Object.keys(wilayahMap)
       .map((key) => ({
         wilayah: key,
-        total:
-          wilayahMap[key]
+        label: key.split(",")[0].trim(),
+        total: wilayahMap[key]
       }))
       .sort(
         (a, b) =>
@@ -601,10 +601,9 @@ Gunakan bahasa Indonesia singkat dan profesional.
             />
 
             <XAxis
-              dataKey="wilayah"
-              tick={{
-                fontSize: 11
-              }}
+              dataKey="label"
+              tick={{ fontSize: 11 }}
+              interval={0}
             />
 
             <YAxis
@@ -675,11 +674,32 @@ Gunakan bahasa Indonesia singkat dan profesional.
               dataKey="bulan"
             />
 
-            <YAxis />
+            <YAxis
+              yAxisId="berat"
+              orientation="left"
+              tickFormatter={(v) => v + " kg"}
+              tick={{ fontSize: 11 }}
+              stroke="#22c55e"
+            />
 
-            <Tooltip />
+            <YAxis
+              yAxisId="tinggi"
+              orientation="right"
+              tickFormatter={(v) => v + " cm"}
+              tick={{ fontSize: 11 }}
+              stroke="#f59e0b"
+            />
+
+            <Tooltip
+              formatter={(value, name) =>
+                name === "berat"
+                  ? [value + " kg", "Berat"]
+                  : [value + " cm", "Tinggi"]
+              }
+            />
 
             <Line
+              yAxisId="berat"
               type="monotone"
               dataKey="berat"
               stroke="#22c55e"
@@ -688,6 +708,7 @@ Gunakan bahasa Indonesia singkat dan profesional.
             />
 
             <Line
+              yAxisId="tinggi"
               type="monotone"
               dataKey="tinggi"
               stroke="#f59e0b"
